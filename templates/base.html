@@ -1,0 +1,24 @@
+<! -- a standard HTML boilerplate with two template % blocks % -- >
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+    </head>
+    <body>
+        <header>
+            <h1>ACS-1710 Quiz 2 SWAPI Character Search</h1>
+            <br />
+        </header>
+
+        <main>
+            {% block content %}{% endblock %}
+        </main>
+
+        <footer>
+            <br />
+            <a href="http://127.0.0.1:5000/characterSelect">Click here to seach for a character!</a>
+        </footer>
+    </body>
+</html>

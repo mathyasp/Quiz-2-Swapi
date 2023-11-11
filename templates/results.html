@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Star Wars Character Results
+{% endblock title %}
+
+{% block content %}
+{% if character.name %}
+    <section>
+    <h2>{{character.name}}</h2>
+    <dl>
+        {% for attribute in character_attributes %}
+            {% for key, value in attribute.items() %}
+                <dt>{{ key }}:</dt>
+                <dd>{{ 'N/A' if value == 'none' or value == 'unknown' else value }}</dd>
+            {% endfor %}
+        {% endfor %}
+    </dl>
+    </section>
+{% else %}
+    <p>Sorry, no character found with that name.</p>
+{% endif %}
+
+{% endblock content %}

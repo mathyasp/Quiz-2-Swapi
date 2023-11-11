@@ -1,0 +1,11 @@
+{% block title %}
+    <h1>Star Wars Character Search</h1>
+{% endblock %}
+
+{% block content %}
+    <form action="/results" method="GET">
+        <label for="character_id">Enter a character ID: </label>
+        <input type="text" name="character_id">
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}
